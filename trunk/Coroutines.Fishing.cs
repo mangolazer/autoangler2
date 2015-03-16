@@ -108,7 +108,7 @@ namespace HighVoltz.AutoAngler
 				return false;
 			}
 
-			if (Me.IsSwimming)
+			if (Me.IsSwimming && WaterWalking.IsActive)
 				await JumpOnWaterSurface();
 
 			if (Me.IsMoving)
@@ -234,11 +234,9 @@ namespace HighVoltz.AutoAngler
 
 		static async Task JumpOnWaterSurface()
 		{
-			if (!Me.IsSwimming)
-				return;
 			AutoAnglerBot.Log("Jumping up on water surface since I'm swimming but have water walking");
 			var sw = Stopwatch.StartNew();
-			while (StyxWoW.Me.IsSwimming)
+			while (StyxWoW.Me.IsSwimming && WaterWalking.IsActive)
 			{
 				if (StyxWoW.Me.IsBeingAttacked)
 					return;
