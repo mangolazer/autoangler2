@@ -30,6 +30,7 @@ namespace HighVoltz.AutoAngler
 																	{6811, "Aquadynamic Fish Lens"},
 																	{6529, "Shiny Bauble"},
 																	{67404, "Glass Fishing Bobber"},
+																	{118391, "Worm Supreme"}
 																};
 
 		// does nothing if no lures are in bag
